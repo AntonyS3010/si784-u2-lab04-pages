@@ -1,0 +1,67 @@
+{
+  "api/EcommerceApp.Api.Controllers.CartController.html": {
+    "href": "api/EcommerceApp.Api.Controllers.CartController.html",
+    "title": "Class CartController | EcommerceApp.Api - SI784 Lab04",
+    "summary": "Class CartController Namespace EcommerceApp.Api.Controllers Assembly EcommerceApp.Api.dll Coordina descuento, cobro y envío al finalizar una compra. [ApiController] [Route(\"[controller]\")] public class CartController Inheritance object CartController Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Constructors CartController(ICartService, IPaymentService, IShipmentService, IDiscountService) Inicializa las dependencias del proceso de compra. public CartController(ICartService cartService, IPaymentService paymentService, IShipmentService shipmentService, IDiscountService discountService) Parameters cartService ICartService Servicio de carrito. paymentService IPaymentService Servicio de pago. shipmentService IShipmentService Servicio de envío. discountService IDiscountService Servicio de descuento. Methods CheckOut(ICard, IAddressInfo) Aplica el descuento, cobra el monto final y envía solo si el pago se aprueba. [HttpPost] public string CheckOut(ICard card, IAddressInfo addressInfo) Parameters card ICard Tarjeta del comprador. addressInfo IAddressInfo Dirección de envío. Returns string charged para pago aprobado; not charged para pago rechazado."
+  },
+  "api/EcommerceApp.Api.Controllers.html": {
+    "href": "api/EcommerceApp.Api.Controllers.html",
+    "title": "Namespace EcommerceApp.Api.Controllers | EcommerceApp.Api - SI784 Lab04",
+    "summary": "Namespace EcommerceApp.Api.Controllers Classes CartController Coordina descuento, cobro y envío al finalizar una compra."
+  },
+  "api/EcommerceApp.Api.Models.IAddressInfo.html": {
+    "href": "api/EcommerceApp.Api.Models.IAddressInfo.html",
+    "title": "Interface IAddressInfo | EcommerceApp.Api - SI784 Lab04",
+    "summary": "Interface IAddressInfo Namespace EcommerceApp.Api.Models Assembly EcommerceApp.Api.dll Contrato de dirección de envío utilizado por el controlador. public interface IAddressInfo Properties Address Referencia o detalle de la dirección. string Address { get; set; } Property Value string City Ciudad del destinatario. string City { get; set; } Property Value string PhoneNumber Teléfono de contacto. string PhoneNumber { get; set; } Property Value string PostalCode Código postal. string PostalCode { get; set; } Property Value string Street Calle de la dirección. string Street { get; set; } Property Value string"
+  },
+  "api/EcommerceApp.Api.Models.ICard.html": {
+    "href": "api/EcommerceApp.Api.Models.ICard.html",
+    "title": "Interface ICard | EcommerceApp.Api - SI784 Lab04",
+    "summary": "Interface ICard Namespace EcommerceApp.Api.Models Assembly EcommerceApp.Api.dll Contrato de tarjeta de pago utilizado por el controlador. public interface ICard Properties CardNumber Número de tarjeta del contrato de pago. string CardNumber { get; set; } Property Value string Name Nombre del titular. string Name { get; set; } Property Value string ValidTo Fecha de vencimiento. DateTime ValidTo { get; set; } Property Value DateTime"
+  },
+  "api/EcommerceApp.Api.Models.ICartItem.html": {
+    "href": "api/EcommerceApp.Api.Models.ICartItem.html",
+    "title": "Interface ICartItem | EcommerceApp.Api - SI784 Lab04",
+    "summary": "Interface ICartItem Namespace EcommerceApp.Api.Models Assembly EcommerceApp.Api.dll Contrato de elemento del carrito utilizado por el controlador. public interface ICartItem Properties Price Precio unitario. double Price { get; set; } Property Value double ProductId Identificador del producto. string ProductId { get; set; } Property Value string Quantity Cantidad de unidades. int Quantity { get; set; } Property Value int"
+  },
+  "api/EcommerceApp.Api.Models.html": {
+    "href": "api/EcommerceApp.Api.Models.html",
+    "title": "Namespace EcommerceApp.Api.Models | EcommerceApp.Api - SI784 Lab04",
+    "summary": "Namespace EcommerceApp.Api.Models Interfaces IAddressInfo Contrato de dirección de envío utilizado por el controlador. ICard Contrato de tarjeta de pago utilizado por el controlador. ICartItem Contrato de elemento del carrito utilizado por el controlador."
+  },
+  "api/EcommerceApp.Api.Services.ICartService.html": {
+    "href": "api/EcommerceApp.Api.Services.ICartService.html",
+    "title": "Interface ICartService | EcommerceApp.Api - SI784 Lab04",
+    "summary": "Interface ICartService Namespace EcommerceApp.Api.Services Assembly EcommerceApp.Api.dll Proporciona el total y los elementos del carrito. public interface ICartService Methods Items() Obtiene los elementos que se enviarán. IEnumerable<ICartItem> Items() Returns IEnumerable<ICartItem> Secuencia de elementos del carrito. Total() Obtiene el monto total antes del descuento. double Total() Returns double Total de la operación."
+  },
+  "api/EcommerceApp.Api.Services.IDiscountService.html": {
+    "href": "api/EcommerceApp.Api.Services.IDiscountService.html",
+    "title": "Interface IDiscountService | EcommerceApp.Api - SI784 Lab04",
+    "summary": "Interface IDiscountService Namespace EcommerceApp.Api.Services Assembly EcommerceApp.Api.dll Aplica el descuento al total de la operación. public interface IDiscountService Methods Apply(double) Calcula el monto final que debe cobrarse. double Apply(double total) Parameters total double Total del carrito antes del descuento. Returns double Monto neto después del descuento."
+  },
+  "api/EcommerceApp.Api.Services.IPaymentService.html": {
+    "href": "api/EcommerceApp.Api.Services.IPaymentService.html",
+    "title": "Interface IPaymentService | EcommerceApp.Api - SI784 Lab04",
+    "summary": "Interface IPaymentService Namespace EcommerceApp.Api.Services Assembly EcommerceApp.Api.dll Representa el servicio de cobro. public interface IPaymentService Methods Charge(double, ICard) Intenta cobrar el monto final a la tarjeta indicada. bool Charge(double total, ICard card) Parameters total double Monto después del descuento. card ICard Tarjeta utilizada para el pago. Returns bool Verdadero si el pago fue aprobado."
+  },
+  "api/EcommerceApp.Api.Services.IShipmentService.html": {
+    "href": "api/EcommerceApp.Api.Services.IShipmentService.html",
+    "title": "Interface IShipmentService | EcommerceApp.Api - SI784 Lab04",
+    "summary": "Interface IShipmentService Namespace EcommerceApp.Api.Services Assembly EcommerceApp.Api.dll Representa el envío de los elementos de un pedido aprobado. public interface IShipmentService Methods Ship(IAddressInfo, IEnumerable<ICartItem>) Solicita el envío del pedido. void Ship(IAddressInfo info, IEnumerable<ICartItem> items) Parameters info IAddressInfo Dirección del destinatario. items IEnumerable<ICartItem> Elementos que se enviarán."
+  },
+  "api/EcommerceApp.Api.Services.html": {
+    "href": "api/EcommerceApp.Api.Services.html",
+    "title": "Namespace EcommerceApp.Api.Services | EcommerceApp.Api - SI784 Lab04",
+    "summary": "Namespace EcommerceApp.Api.Services Interfaces ICartService Proporciona el total y los elementos del carrito. IDiscountService Aplica el descuento al total de la operación. IPaymentService Representa el servicio de cobro. IShipmentService Representa el envío de los elementos de un pedido aprobado."
+  },
+  "clases.html": {
+    "href": "clases.html",
+    "title": "Diagrama de clases | EcommerceApp.Api - SI784 Lab04",
+    "summary": "Diagrama de clases Generado desde EcommerceApp.Api.dll con dll2mmd 1.0.6. El archivo original clases.md se conserva en el repositorio. classDiagram class ICartService ICartService : +Total() Double ICartService : +Items() IEnumerable~ICartItem~ class IDiscountService IDiscountService : +Apply() Double class IPaymentService IPaymentService : +Charge() Boolean class IShipmentService IShipmentService : +Ship() Void class IAddressInfo IAddressInfo : +String Street IAddressInfo : +String Address IAddressInfo : +String City IAddressInfo : +String PostalCode IAddressInfo : +String PhoneNumber class ICard ICard : +String CardNumber ICard : +String Name ICard : +DateTime ValidTo class ICartItem ICartItem : +String ProductId ICartItem : +Int Quantity ICartItem : +Double Price class CartController CartController : +CheckOut() String import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11.12.0/dist/mermaid.esm.min.mjs'; mermaid.initialize({ startOnLoad: false, securityLevel: 'strict' }); await mermaid.run({ querySelector: '.mermaid' });"
+  },
+  "index.html": {
+    "href": "index.html",
+    "title": "EcommerceApp - Pruebas con NUnit y Moq | EcommerceApp.Api - SI784 Lab04",
+    "summary": "EcommerceApp - Pruebas con NUnit y Moq La solución EcommerceApp contiene el componente web EcommerceApp.Api y las pruebas EcommerceApp.Tests sobre .NET 10. CartController.CheckOut obtiene el total del carrito, llama a IDiscountService.Apply, cobra el monto neto y solicita el envío únicamente cuando el pago se aprueba. Se conservan los dos métodos de prueba de la guía y se añade un tercero con TestCase(true, \"charged\") y TestCase(false, \"not charged\"): tres métodos y cuatro casos ejecutados. Moq verifica el total exacto, el monto descontado, la tarjeta, la dirección, los elementos y el número de invocaciones. Las pruebas ejercitan las colaboraciones del controlador mediante dobles. El consumidor proporciona los servicios reales y el alojamiento web. El proyecto se empaqueta como biblioteca web para reutilizar el controlador y sus contratos. El diagrama de clases se genera desde el ensamblado compilado con dll2mmd. El reporte HTML de cobertura se encuentra en coverage del sitio principal."
+  }
+}

@@ -1,0 +1,23 @@
+Summary
+  Generated on: 11/14/2026 - 05:31:47
+  Coverage date: 11/14/2026 - 05:31:44
+  Parser: Cobertura
+  Assemblies: 1
+  Classes: 1
+  Files: 1
+  Line coverage: 100%
+  Covered lines: 13
+  Uncovered lines: 0
+  Coverable lines: 13
+  Total lines: 51
+  Branch coverage: 100% (2 of 2)
+  Covered branches: 2
+  Total branches: 2
+  Method coverage: 100% (2 of 2)
+  Full method coverage: 100% (2 of 2)
+  Covered methods: 2
+  Fully covered methods: 2
+  Total methods: 2
+
+EcommerceApp.Api                                 100%
+  EcommerceApp.Api.Controllers.CartController    100%
